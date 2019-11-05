@@ -2,7 +2,7 @@ package com.example.tdd;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class TestMultiCurrency {
 
@@ -16,7 +16,7 @@ public class TestMultiCurrency {
         assertEquals(15, five.amount);
     }*/
 
-    //TODO Dollar类有副作用吗？
+    // Dollar类有副作用吗？
     @Test
     public void testMultiplication() {
         Dollar five = new Dollar(5);
@@ -24,6 +24,13 @@ public class TestMultiCurrency {
         assertEquals(10, product.amount);
         product = five.times(3);
         assertEquals(15, product.amount);
+    }
+
+    // 实现equals()函数，使得Dollar成为数值对象
+    @Test
+    public void testEquality() {
+        assertTrue(new Dollar(5).equals(new Dollar(5)));
+        assertFalse(new Dollar(5).equals(new Dollar(6)));
     }
 
 }
