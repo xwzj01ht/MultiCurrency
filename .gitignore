@@ -4,3 +4,6 @@
 
 # IntelliJ project files
 .idea
+
+# maven
+target
