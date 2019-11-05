@@ -19,11 +19,16 @@ public class TestMultiCurrency {
     // Dollar类有副作用吗？
     @Test
     public void testMultiplication() {
-        Dollar five = new Dollar(5);
+        /*Dollar five = new Dollar(5);
         Dollar product = five.times(2);
         assertEquals(10, product.amount);
         product = five.times(3);
-        assertEquals(15, product.amount);
+        assertEquals(15, product.amount);*/
+
+        // 将 amount 定义为私有
+        Dollar five = new Dollar(5);
+        assertEquals(new Dollar(10), five.times(2));
+        assertEquals(new Dollar(15), five.times(3));
     }
 
     // 实现equals()函数，使得Dollar成为数值对象
