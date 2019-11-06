@@ -14,3 +14,4 @@
 * 普通相乘
 * ~~比较法郎对象和美元对象~~
 * 货币？
+* 删除testFrancMultiplication？
