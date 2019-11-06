@@ -38,4 +38,11 @@ public class TestMultiCurrency {
         assertFalse(new Dollar(5).equals(new Dollar(6)));
     }
 
+    // 5瑞士法郎*2=10瑞士法郎
+    @Test
+    public void testFrancMultiplication() {
+        Franc five = new Franc(5);
+        assertEquals(new Franc(10), five.times(2));
+        assertEquals(new Franc(15), five.times(3));
+    }
 }
