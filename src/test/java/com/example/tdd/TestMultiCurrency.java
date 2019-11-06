@@ -115,4 +115,23 @@ public class TestMultiCurrency {
         assertEquals(Money.dollar(7), reduced);
     }
 
+    @Test
+    public void testReduceMoneyDifferentCurrency() {
+        // 我有2法郎，但想得到1美元
+        Bank bank = new Bank();
+        bank.addRate("CHF", "USD", 2);
+        Money result = bank.reduce(Money.franc(2), "USD");
+        assertEquals(Money.dollar(1), result);
+    }
+
+    @Test
+    public void testArrayEquals() {
+        assertEquals(new Object[]{"abc"}, new Object[]{"abc"});
+    }
+
+    @Test
+    public void testIdentityRate() {
+        assertEquals(1, new Bank().rate("USD", "USD"));
+    }
+
 }
