@@ -91,4 +91,28 @@ public class TestMultiCurrency {
         assertEquals(Money.dollar(10), reduced);
     }
 
+    @Test
+    public void testPlusReturnSum() {
+        Money five = Money.dollar(5);
+        Expression result = five.plus(five);
+        Sum sum = (Sum)result;
+        assertEquals(five, sum.augend);
+        assertEquals(five, sum.addend);
+    }
+
+    @Test
+    public void testReduceSum() {
+        Sum sum = new Sum(Money.dollar(3), Money.dollar(4));
+        Bank bank = new Bank();
+        Money reduced = bank.reduce(sum, "USD");
+        assertEquals(Money.dollar(7), reduced);
+    }
+
+    @Test
+    public void testReduceMoney() {
+        Bank bank = new Bank();
+        Money reduced = bank.reduce(Money.dollar(7), "USD");
+        assertEquals(Money.dollar(7), reduced);
+    }
+
 }
