@@ -9,9 +9,9 @@
 * 与空对象判等
 * 与非同类对象判等
 * ~~5瑞士法郎*2=10瑞士法郎~~
-* 美元Dollar/瑞士法郎Franc之间的重复设计
+* ~~美元Dollar/瑞士法郎Franc之间的重复设计~~
 * ~~普通判等~~
-* 普通相乘
+* ~~普通相乘~~
 * ~~比较法郎对象和美元对象~~
-* 货币？
-* 删除testFrancMultiplication？
+* ~~货币？~~
+* ~~删除testFrancMultiplication？~~

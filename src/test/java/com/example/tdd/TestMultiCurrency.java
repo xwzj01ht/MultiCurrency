@@ -30,7 +30,7 @@ public class TestMultiCurrency {
         assertEquals(new Dollar(10), five.times(2));
         assertEquals(new Dollar(15), five.times(3));*/
 
-        //TODO 美元Dollar/瑞士法郎Franc之间的重复设计
+        // 美元Dollar/瑞士法郎Franc之间的重复设计
         /*Money five = Money.dollar(5);
         assertEquals(new Dollar(10), five.times(2));
         assertEquals(new Dollar(15), five.times(3));*/
@@ -61,14 +61,14 @@ public class TestMultiCurrency {
     }
 
     // 5瑞士法郎*2=10瑞士法郎
-    @Test
-    public void testFrancMultiplication() {
-        Money five = Money.franc(5);
-        assertEquals(Money.franc(10), five.times(2));
-        assertEquals(Money.franc(15), five.times(3));
-    }
+//    @Test
+//    public void testFrancMultiplication() {
+//        Money five = Money.franc(5);
+//        assertEquals(Money.franc(10), five.times(2));
+//        assertEquals(Money.franc(15), five.times(3));
+//    }
 
-    //TODO 美元Dollar/瑞士法郎Franc之间的重复设计
+    // 货币？
     @Test
     public void testCurrency() {
         assertEquals("USD", Money.dollar(1).currency());
