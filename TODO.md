@@ -19,9 +19,11 @@
 * ~~删除testFrancMultiplication？~~
 
 #### 2019-11-07
-* 当瑞士法郎与美元的兑换率为2:1的时候，5美元+10瑞士法郎=10美元
+* ~~当瑞士法郎与美元的兑换率为2:1的时候，5美元+10瑞士法郎=10美元~~
 * ~~5美元+5美元=10美元~~
 * 从5美元+5美元返回一个Money对象
 * ~~Bank.reduce(Money)~~
 * ~~带换算的Reduce Money~~
 * ~~Reduce(Bank, String)~~
+* Sum.plus()
+* Expression.times()

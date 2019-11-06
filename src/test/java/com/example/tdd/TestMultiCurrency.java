@@ -134,4 +134,25 @@ public class TestMultiCurrency {
         assertEquals(1, new Bank().rate("USD", "USD"));
     }
 
+    // 当瑞士法郎与美元的兑换率为2:1的时候，5美元+10瑞士法郎=10美元
+    @Test
+    public void testMixedAdditionMoney() {
+        Money fiveBucks = Money.dollar(5);
+        Money tenFrancs = Money.franc(10);
+        Bank bank = new Bank();
+        bank.addRate("CHF", "USD", 2);
+        Money result = bank.reduce(fiveBucks.plus(tenFrancs), "USD");
+        assertEquals(Money.dollar(10), result);
+    }
+
+    @Test
+    public void testMixedAdditionExpression() {
+        Expression fiveBucks = Money.dollar(5);
+        Expression tenFrancs = Money.franc(10);
+        Bank bank = new Bank();
+        bank.addRate("CHF", "USD", 2);
+        Money result = bank.reduce(fiveBucks.plus(tenFrancs), "USD");
+        assertEquals(Money.dollar(10), result);
+    }
+
 }
