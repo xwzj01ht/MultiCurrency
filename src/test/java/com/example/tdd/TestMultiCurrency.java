@@ -179,4 +179,11 @@ public class TestMultiCurrency {
         assertEquals(Money.dollar(20), result);
     }
 
+    // 从5美元+5美元返回一个Money对象
+   /* @Test
+    public void testPlusSameCurrencyReturnsMoney() {
+        Expression sum = Money.dollar(5).plus(Money.dollar(5));
+        assertTrue(sum instanceof Money);
+    }*/
+
 }
