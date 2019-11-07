@@ -25,5 +25,5 @@
 * ~~Bank.reduce(Money)~~
 * ~~带换算的Reduce Money~~
 * ~~Reduce(Bank, String)~~
-* Sum.plus()
+* ~~Sum.plus()~~
 * Expression.times()
